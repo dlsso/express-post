@@ -2,3 +2,11 @@ extends layout
 
 block content
 	h1 Hello Boulder!
+
+	h3 Last Submission
+	p #{submissionData.username}
+
+	form(method="post", action="/handleForm")
+		input(type="text", name="username", placeholder="Username")
+		input(type="text", name="email", placeholder="Email")
+		input(type="submit")
